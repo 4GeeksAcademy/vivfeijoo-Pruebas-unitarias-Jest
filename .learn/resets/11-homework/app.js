@@ -12,22 +12,5 @@ let oneEuroIs = {
     "USD": 1.07, // us dollar
     "GBP": 0.87, // british pound
 }
-
-
-const fromDollarToYen = function(valueInDollar) {
-    let valueInEuro = valueInDollar / oneEuroIs["USD"];
-    return valueInEuro * oneEuroIs["JPY"];
-}
-
-
-const fromYenToPound = function(valueInYen) {
-    let valueInEuro = valueInYen / oneEuroIs["JPY"];
-    return valueInEuro * oneEuroIs["GBP"];
-}
-
-
-
-
-
 // Tenemos que incluir la función en el exports para que sea exportada a otros archivos como test.js
-module.exports = { fromEuroToDollar, fromDollarToYen, fromYenToPound };
+module.exports = { fromEuroToDollar };
